@@ -12,7 +12,7 @@ export const orgContext = React.createContext<organizationContext>({
 
 export const OrgProvider: React.FC = (props) => {
   const { children } = props;
-  const [org, setOrg] = React.useState<string>("Lemoncode");
+  const [org, setOrg] = React.useState<string>("apple");
 
   return (
     <orgContext.Provider value={{ org, setOrg }}>
