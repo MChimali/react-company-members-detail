@@ -1,24 +1,26 @@
-const { merge } = require('webpack-merge');
-const base = require('./base');
+const { merge } = require("webpack-merge");
+const base = require("./base");
+const path = require("path");
+const rootPath = path.resolve(__dirname, "../");
 
 module.exports = merge(base, {
-  mode: 'production',
+  mode: "production",
   output: {
-    path: `${__dirname}/../dist`,
-    filename: './js/[name].[chunkhash].js',
-    assetModuleFilename: './images/[hash][ext][query]',
+    path: path.join(rootPath, "dist"),
+    filename: "./js/[name].js",
+    assetModuleFilename: "./images/[ext][query]",
   },
   optimization: {
-    runtimeChunk: 'single',
+    runtimeChunk: "single",
     splitChunks: {
       cacheGroups: {
         vendor: {
-          chunks: 'all',
-          name: 'vendor',
+          chunks: "all",
+          name: "vendor",
           test: /[\\/]node_modules[\\/]/,
           enforce: true,
         },
       },
     },
-  }
+  },
 });

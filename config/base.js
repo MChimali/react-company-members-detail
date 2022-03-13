@@ -6,31 +6,6 @@ const { merge } = require("webpack-merge");
 module.exports = merge(
   {},
   {
-    module: {
-      rules: [
-        {
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          loader: "babel-loader",
-        },
-        {
-          test: /\.(png|jpg|gif|svg)$/,
-          type: "asset/resource",
-        },
-      ],
-    },
-    plugins: [
-      new HtmlWebpackPlugin({
-        filename: "index.html",
-        template: "index.html",
-      }),
-    ],
-  }
-);
-
-module.exports = merge(
-  {},
-  {
     context: path.join(basePath, "../src"),
     resolve: {
       extensions: [".js", ".ts", ".tsx"],
