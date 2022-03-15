@@ -5,7 +5,7 @@ import { checkCredentials } from "./components/checkcredentials";
 import Button from "@material-ui/core/Button/Button";
 import { FailLoginText } from "./components/fail-credentials";
 import { InputLogin } from "./components/login-input";
-import { UsefocusRef } from "./components/inputfocus.hook";
+import { useFocusRef } from "./components/inputfocus.hook";
 import { useStyles } from "./styles";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
@@ -22,7 +22,7 @@ export const LoginComponent: React.FC<Props> = (props) => {
   const [password, setPassword] = React.useState<string>("");
   const [flagUser, setFlagUser] = React.useState<boolean>(false);
   const { setUser } = React.useContext(AuthContext);
-  const [focusInput, ref] = UsefocusRef();
+  const [focusInput, ref] = useFocusRef();
 
   const submitUser = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
