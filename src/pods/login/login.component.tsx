@@ -1,7 +1,7 @@
 import React from "react";
 import { User } from "./api/api.model";
 import { AuthContext } from "../../core";
-import { checkCredentials } from "./components/checkcredentials";
+import { checkCredentials } from "./api/checkcredentials";
 import Button from "@material-ui/core/Button/Button";
 import { FailLoginText } from "./components/fail-credentials";
 import { InputLogin } from "./components/login-input";
