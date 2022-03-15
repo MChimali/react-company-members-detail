@@ -22,17 +22,3 @@ export const LiElement: React.FC<Props> = (props) => {
     </>
   );
 };
-
-export const LiLinkElement: React.FC<Props> = (props) => {
-  const classes = useStyles();
-  const { string, item } = props;
-  return (
-    <>
-      <li className={classes.divText}>
-        <p className={classes.text}>
-          {string} <a href={item}>{item}</a>
-        </p>
-      </li>
-    </>
-  );
-};

@@ -5,7 +5,8 @@ import List from "@material-ui/core/List";
 import Collapse from "@material-ui/core/Collapse";
 import { useStyles } from "./style.component";
 import { NavElement } from "./components/nav-component";
-import { LiElement, LiLinkElement } from "./components/list.element";
+import { LiElement } from "./components/list.element";
+import {LiLinkElement} from "./components/list.link.element";
 
 interface Props {
   member: Member;
